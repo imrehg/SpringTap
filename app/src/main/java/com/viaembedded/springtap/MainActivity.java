@@ -4,16 +4,40 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.util.Log;
 
 public class MainActivity extends Activity {
+
+    MySurfaceView mySurfaceView;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mySurfaceView = (MySurfaceView)findViewById(R.id.bigField);
+        mySurfaceView.setOnTouchListener(mySurfaceView);
+
+        if (savedInstanceState != null) {
+            Log.d(TAG, "onCreate() Restoring previous state");
+            /* restore state */
+        } else {
+            Log.d(TAG, "onCreate() No saved state available");
+            /* initialize app */
+        }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mySurfaceView   .resume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySurfaceView.pause();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -36,4 +60,5 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

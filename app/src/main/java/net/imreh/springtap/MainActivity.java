@@ -1,4 +1,4 @@
-package com.viaembedded.springtap;
+package net.imreh.springtap;
 
 import android.app.Activity;
 import android.os.Bundle;

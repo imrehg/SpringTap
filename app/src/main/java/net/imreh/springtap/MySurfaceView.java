@@ -1,4 +1,4 @@
-package com.viaembedded.springtap;
+package net.imreh.springtap;
 
 /**
  * Created by greg on 11/5/14.
@@ -18,8 +18,6 @@ import android.view.SurfaceView;
 import android.view.View;
 
 import com.via.SmartETK;
-
-import java.util.ArrayList;
 
 public class MySurfaceView extends SurfaceView implements Runnable, View.OnGenericMotionListener {
 

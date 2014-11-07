@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 15
     buildToolsVersion "21.0.2"
-
     defaultConfig {
-        applicationId "com.viaembedded.springtap"
+        applicationId "net.imreh.springtap"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 15
         versionCode 1
         versionName "1.0"
     }
@@ -16,6 +15,8 @@ android {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 

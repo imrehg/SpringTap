@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mySurfaceView = (MySurfaceView)findViewById(R.id.bigField);
-        mySurfaceView.setOnTouchListener(mySurfaceView);
+        mySurfaceView.setOnGenericMotionListener(mySurfaceView);
 
         if (savedInstanceState != null) {
             Log.d(TAG, "onCreate() Restoring previous state");
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         for (int i = 0; i < 8; i++) {
             SmartETK.Gpio_Enable(i, true);
             SmartETK.Gpio_Set(i, SmartETK.GM_GPO, SmartETK.GM_NO_PULL);
-            SmartETK.Gpio_Write(i, 1);
+            SmartETK.Gpio_Write(i, 0);
         }
     }
 

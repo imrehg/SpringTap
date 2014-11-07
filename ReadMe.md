@@ -3,6 +3,12 @@
 Demo application to use with ProtoSpring, the prototyping board
 made for the [VIA VAB-600 Springboard][vab600].
 
+## Demo
+
+Demo video online:
+
+[![SpringTap](http://img.youtube.com/vi/P7l83dN_21g/0.jpg)](http://youtu.be/P7l83dN_21g)
+
 ## License
 
 **The MIT License (MIT)**

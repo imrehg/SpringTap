@@ -5,7 +5,7 @@ made for the [VIA VAB-600 Springboard][vab600].
 
 ## License
 
-*The MIT License (MIT)*
+**The MIT License (MIT)**
 
 Copyright (c) 2014 Gergely Imreh <imrehg@gmail.com>
 

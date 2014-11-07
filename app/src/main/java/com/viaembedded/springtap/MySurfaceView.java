@@ -16,6 +16,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import com.via.SmartETK;
 
 public class MySurfaceView extends SurfaceView implements Runnable, OnTouchListener {
 

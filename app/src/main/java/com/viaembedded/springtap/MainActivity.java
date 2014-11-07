@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
+import com.via.SmartETK;
 
 public class MainActivity extends Activity {
 
@@ -23,7 +24,13 @@ public class MainActivity extends Activity {
             /* restore state */
         } else {
             Log.d(TAG, "onCreate() No saved state available");
-            /* initialize app */
+        }
+        SmartETK.Init();
+        // Initialize Springboard's 8xGPIO
+        for (int i = 0; i < 8; i++) {
+            SmartETK.Gpio_Enable(i, true);
+            SmartETK.Gpio_Set(i, SmartETK.GM_GPO, SmartETK.GM_NO_PULL);
+            SmartETK.Gpio_Write(i, 1);
         }
     }
 
